@@ -1,0 +1,10 @@
+
+/detours/disasm.cpp
+/detours/image.cpp
+/detours/modules.cpp
+/detours/creatwth.cpp
+/detours/detoured.cpp
+/detours/detoured.h
+/detours/detoured.rc
+/detours/detours.cpp
+/detours/detours.h
