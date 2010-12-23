@@ -1,3 +1,7 @@
+
+#include <map>
+#include <utility>
+
 // The following ifdef block is the standard way of creating macros which make exporting 
 // from a DLL simpler. All files within this DLL are compiled with the INJECT_EXPORTS
 // symbol defined on the command line. This symbol should not be defined on any project
@@ -10,11 +14,30 @@
 #define INJECT_API __declspec(dllimport)
 #endif
 
-// This class is exported from the Inject.dll
-class INJECT_API CInject {
+// The singleton that represents the injection dll
+class CInject {
 public:
-	CInject(void);
-	// TODO: add your methods here.
+	static INJECT_API CInject& GetInstance();
+	~CInject();
+private:
+	CInject();
+	CInject(CInject const&);
+	CInject& operator=(CInject const&);
+
+	//Hooks declaration
+	static HANDLE WINAPI ImpCreateFile(LPCWSTR, DWORD, DWORD, LPSECURITY_ATTRIBUTES, DWORD, DWORD, HANDLE);
+	static BOOL   WINAPI ImpReadFile(HANDLE, LPVOID, DWORD, LPOVERLAPPED, LPOVERLAPPED_COMPLETION_ROUTINE);
+	static BOOL   WINAPI ImpWriteFile(HANDLE, LPCVOID, DWORD, LPOVERLAPPED, LPOVERLAPPED_COMPLETION_ROUTINE);
+
+
+	bool RegisterHooks();
+	bool UnRegisterHooks();
+	bool AddNewHook(void* original, void* hooked);
+
+	//typedef std::pair<void*, void*> THook;
+	typedef void* Address;
+	typedef std::map<Address, Address> THooks;
+	THooks m_Hooks;
 };
 
 extern INJECT_API int nInject;

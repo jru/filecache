@@ -16,6 +16,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "filecache", "filecache\file
 		{EA272171-E145-4AFD-94DB-978DBDC004D1} = {EA272171-E145-4AFD-94DB-978DBDC004D1}
 	EndProjectSection
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "WithDLL", "WithDLL\WithDLL.vcxproj", "{4098398F-CE35-4113-9B57-B48FA51E68EB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -38,6 +40,10 @@ Global
 		{98946FEB-1FA2-4470-8AB4-8EBBAD8C8400}.Debug|Win32.Build.0 = Debug|Win32
 		{98946FEB-1FA2-4470-8AB4-8EBBAD8C8400}.Release|Win32.ActiveCfg = Release|Win32
 		{98946FEB-1FA2-4470-8AB4-8EBBAD8C8400}.Release|Win32.Build.0 = Release|Win32
+		{4098398F-CE35-4113-9B57-B48FA51E68EB}.Debug|Win32.ActiveCfg = Debug|Win32
+		{4098398F-CE35-4113-9B57-B48FA51E68EB}.Debug|Win32.Build.0 = Debug|Win32
+		{4098398F-CE35-4113-9B57-B48FA51E68EB}.Release|Win32.ActiveCfg = Release|Win32
+		{4098398F-CE35-4113-9B57-B48FA51E68EB}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

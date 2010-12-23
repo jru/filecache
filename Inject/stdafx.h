@@ -11,4 +11,8 @@
 // Windows Header Files:
 #include <windows.h>
 
+#include <functional> 
+#include <algorithm>
+
+#include <stdio.h>
 #include "detours.h"
